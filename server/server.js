@@ -1,18 +1,15 @@
-// Import the express package
-import express from 'express';
+import express from "express";
+import 'dotenv/config';
+import connectDB from "./config/mongodb.js"; 
 
-// Create an instance of the express app
+
 const app = express();
+const port = process.env.PORT || 4000;
 
-// Define the port where the server will listen
-const PORT = 4000;
+connectDB();
 
-// Define a basic route
-app.get('/', (req, res) => {
-  res.send('Hello, World!');
-});
+app.use((req, res) => {
+    res.status(404).json({ success: false, message: 'Ruta no encontrada' });
+  });
 
-// Start the server
-app.listen(PORT, () => {
-  console.log(`Server is running at http://localhost:${PORT}`);
-});
+app.listen(port, () => console.log(`Server started on PORT:${port}`));

@@ -1,0 +1,5 @@
+1. Create project in Node
+ npm init -y    
+ 
+2. Install librerias
+npm install express cors dotenv cookie-parser mongoose
