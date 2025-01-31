@@ -32,4 +32,4 @@ const userAuth = async (req, res, next) => {
   }
 };
 
-export default userAuth; // Asegúrate de usar export default
+export default userAuth; 
