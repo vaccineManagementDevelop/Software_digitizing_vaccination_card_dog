@@ -31,7 +31,7 @@ export const register = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 días en milisegundos
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in ms
     });
 
     //Sending welcome email
@@ -88,7 +88,7 @@ export const login = async (req, res) => {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: process.env.NODE_ENV === 'production' ? 'none' : 'strict',
-      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 días en milisegundos
+      maxAge: 7 * 24 * 60 * 60 * 1000, // 7 days in milisegundos
     });
 
     return res.json({ success: true });
