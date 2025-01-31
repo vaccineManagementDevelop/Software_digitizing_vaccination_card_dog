@@ -1,1 +1,2 @@
 # Software_digitizing_vaccination_card_dog
+This project digitazing.
