@@ -3,3 +3,5 @@
  
 2. Install librerias
 npm install express cors dotenv cookie-parser mongoose
+npm install bcrypt
+
